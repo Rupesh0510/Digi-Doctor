@@ -1,0 +1,59 @@
+/* ── Digi Doctor — Global Styles ─────────────────── */
+:root {
+  --primary: #0f4c75;
+  --accent:  #1b6ca8;
+  --light:   #e8f4fd;
+  --success: #1cc88a;
+  --warning: #f6c23e;
+  --danger:  #e74a3b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: #1a1a2e;
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Toast animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade in rows */
+@keyframes rowIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: rowIn .3s ease both; }
+
+/* ── Form shared ── */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(27, 108, 168, .12);
+}
+
+/* ── Spinner ── */
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* ── Responsive table ── */
+.table-responsive { border-radius: 8px; overflow: hidden; }
+
+/* ── Utility ── */
+.text-accent { color: var(--accent); }
+.bg-accent   { background-color: var(--accent); }
+
+/* ── Mobile tweaks ── */
+@media (max-width: 768px) {
+  .main-content { margin-left: 0 !important; }
+  .sidebar      { display: none; }
+}
